@@ -1,5 +1,5 @@
 function countdownTimer() {
-    const endDate = new Date("Sep 1, 2024 00:00:40").getTime();
+    const endDate = new Date("Sep 1, 2024 00:00:00").getTime();
     const now = new Date().getTime();
     const timeLeft = endDate - now;
 
@@ -8,15 +8,9 @@ function countdownTimer() {
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-
-    if (timeLeft < 0) {
+    if (timeLeft <= 0) {
         clearInterval(timer);
-        // Redirect to main content page
-        window.location.href = "../index.html"; // Adjust the path as needed
+        window.location.href = "../../index.html";
     } else {
         document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;

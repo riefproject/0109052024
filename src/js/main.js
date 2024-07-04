@@ -10,7 +10,7 @@ function countdownTimer() {
 
     if (timeLeft <= 0) {
         clearInterval(timer);
-        window.location.href = "../../index.html";
+        window.location.href = "src/html/main.html";
     } else {
         document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;

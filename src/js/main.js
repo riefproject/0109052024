@@ -32,6 +32,8 @@ function startCountdown() {
             const serverTime = new Date(data.datetime).getTime();
             const endDate = new Date("Sep 1, 2024 00:00:00 GMT+0700").getTime();
             clientStartTime = new Date().getTime();
+            console.log('Server time:', serverTime);
+            console.log('End date:', endDate);
             countdownTimer(serverTime, endDate);
             setInterval(() => countdownTimer(serverTime, endDate), 1000);
         })
@@ -40,7 +42,6 @@ function startCountdown() {
 
 let clientStartTime;
 startCountdown();
-
 
 // function countdownTimer() {
 //     const endDate = new Date("Sep 1, 2024 00:00:00").getTime();

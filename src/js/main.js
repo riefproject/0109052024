@@ -26,7 +26,7 @@ function countdownTimer(serverTime, endDate) {
 }
 
 function startCountdown() {
-    fetch('http://worldtimeapi.org/api/timezone/Asia/Jakarta')
+    fetch('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
         .then(response => response.json())
         .then(data => {
             const serverTime = new Date(data.datetime).getTime();
@@ -42,6 +42,7 @@ function startCountdown() {
 
 let clientStartTime;
 startCountdown();
+
 
 // function countdownTimer() {
 //     const endDate = new Date("Sep 1, 2024 00:00:00").getTime();

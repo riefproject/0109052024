@@ -319,11 +319,36 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <script>
       AOS.init();
 
       // Launch confetti on page load
       window.onload = function () {
+        function randomConfetti() {
+          const width = window.innerWidth;
+          const height = window.innerHeight;
+
+          const x = Math.random() * width;
+          const y = Math.random() * height;
+
+          party.confetti(document.body, {
+            count: party.variation.range(20, 40),
+            spread: party.variation.range(60, 100),
+            origin: { x: x / width, y: y / height },
+          });
+        }
+
+        function triggerConfetti(times) {
+          for (let i = 0; i < times; i++) {
+            setTimeout(randomConfetti, i * 300);
+          }
+        }
+
+        // Customize the number of confetti bursts here
+        const confettiBursts = 5;
+        triggerConfetti(confettiBursts);
+
         var confettiSettings = { target: "confetti-canvas", max: 100 };
         var confetti = new ConfettiGenerator(confettiSettings);
         confetti.render();

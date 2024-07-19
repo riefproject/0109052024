@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surat Untukmu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: rgb(238, 174, 202);
+        background: -moz-linear-gradient(
+          90deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(246, 244, 211, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          90deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(246, 244, 211, 1) 100%
+        );
+        background: linear-gradient(
+          90deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(246, 244, 211, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#f6f4d3",GradientType=1);
+        color: #333;
+        padding: 20px;
+      }
+      .container {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(212, 210, 179, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(253, 253, 253, 0.1);
+      }
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        color: #4a90e2;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+      .award {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .award img {
+        width: 100px;
+      }
+      .game {
+        margin: 20px 0;
+      }
+      .game h3 {
+        font-size: 20px;
+        color: #2ecc71;
+        font-weight: bold;
+      }
+      .special-letter {
+        margin-top: 20px;
+        padding: 20px;
+        background: transparent;
+        border-left: 5px solid #4a90e2;
+      }
+      .reveal-text {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 5px;
+      }
+      .reveal-text-additional {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .btn-custom {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .btn-custom:hover {
+        background-color: #357abd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Surat Untukmu</h2>
+      <p>
+        Hai, are you okay? Hidup rasanya berat banget ya... I know life can be
+        tough, but I know you try really hard even when everything seems heavy.
+        Kamu benar-benar luar biasa, dan aku sangat bangga padamu. You deserve
+        to be happy.
+      </p>
+      <p>
+        Ada satu hal yang sering kali menghambat kita:
+        <span class="highlight">"OVERTHINKING"</span>. Worrying tidak
+        menghilangkan masalah di masa depan, namun menghilangkan kedamaian hari
+        ini. So, when you start overthinking, remember this.
+      </p>
+
+      <div class="award">
+        <p>
+          I have a gift for you. Taraa, ini piala untukmu, kamu baru saja
+          memenangkan sesuatu. Bukankah bertahan adalah sebuah kemenangan yang
+          perlu dirayakan? Thank you for holding on. I'm so proud of you!
+        </p>
+        <img
+          src="../assets/img/cutesttrophyever.png"
+          alt="Cutest Trophy for Cutest Girl :D"
+        />
+      </div>
+
+      <div class="game">
+        <h3>Let's play a game for a moment!</h3>
+        <p>
+          Buka tangan kirimu, dan tekuk satu jarimu jika kamu pernah mengalami
+          ini:
+        </p>
+        <ul>
+          <li>
+            Tekuk jari jempol if you've ever felt you weren't good enough.
+          </li>
+          <li>Tekuk jari telunjuk if you've ever felt underappreciated.</li>
+          <li>
+            Tekuk jari tengah if you've ever pushed yourself to exhaustion.
+          </li>
+          <li>Tekuk jari manis if you've ever felt life isn't fair.</li>
+        </ul>
+        <p>
+          <i
+            >*pastikan kamu mengikuti game ini, masih banyak lho teks yang aku
+            tulis. Itu hanya terbuka setelah kamu menyelesaikan gamenya</i
+          >
+        </p>
+        <button class="btn-custom" onclick="revealText()">Confirm</button>
+        <div id="hidden-text" class="reveal-text">
+          If you have your pinky finger left, it means you've made a promise to
+          appreciate and love yourself. Jangan ingkari janji ini ya... You also
+          deserve to be happy!
+        </div>
+      </div>
+
+      <div id="additional-content" class="reveal-text-additional">
+        <p>
+          If you're struggling right now, I'm still proud of you. If you're
+          feeling lost again, I'm still proud of you. If you're at a low point,
+          I'm still proud of you. If today was an anxious day, I'm still proud
+          of you. If nobody told you today, you're doing so much better than you
+          think. Keep going!
+        </p>
+
+        <div class="special-letter">
+          <p><strong>Dear Uswa,</strong></p>
+          <p>
+            I just wanna let you know that you're amazing. Jangan lupa untuk
+            merawat dirimu sendiri. I know you're doing a great job and you
+            deserve all happiness. Always take a rest, jangan memaksakan diri
+            terlalu keras, dan if you have a problem, I'm always here listening.
+            I love you ♡
+          </p>
+        </div>
+
+        <p>Lanjut baca yuk!</p>
+        <button
+          class="btn btn-warning text-center"
+          onclick="showSectionInMain()"
+        >
+          hayuuu!!!
+        </button>
+      </div>
+    </div>
+    <script>
+      function revealText() {
+        document.getElementById("hidden-text").style.display = "block";
+        document.getElementById("additional-content").style.display = "block";
+      }
+      function showSectionInMain() {
+        sessionStorage.setItem("hiddenSection", "true");
+        window.location.href = "main.html"; // Kembali ke a.html setelah menekan tombol
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

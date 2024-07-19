@@ -20,6 +20,11 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="container justify-content-center text-center pb-5">
@@ -74,8 +79,19 @@
       </section>
       <hr />
     </div>
-
-    <div class="container justify-content-center pt-5 pb-5">
+    <div class="row mx-3 mx-md-0 text-center">
+      <p>
+        Eitsss... web ini dibuat tak sesimple itu. buka halaman ini dan ikuti
+        alurnya agar kamu dapat membaca semua yang aku tulis untukmu!
+      </p>
+      <button class="btn btn-warning" onclick="goToLetter()">
+        Lihat surat untukmu!
+      </button>
+    </div>
+    <div
+      class="container justify-content-center pt-5 pb-5 hidden"
+      id="hiddenSection"
+    >
       <div class="row mx-3 mx-md-0">
         <p data-aos="fade-up">
           Ada banyak kenangan indah yang kita lalui bersama (>90% online,
@@ -266,13 +282,13 @@
           Sedikit tentang Website ini
         </h3>
         <p data-aos="fade-up">
-          Web ini dibuat sekitar 2-3 bulan sebelum ultah kamu. Jadi apapun yang
-          terjadi dekat sebelum ultah kamu kemungkinan tak akan tersampaikan
-          pada web ini. Ini dibuat sejauh itu karena aku sadar belum tentu punya
-          waktu luang kalo buatnya mepet tanggal 1 Sep. Sebagian elemennya
-          diambil dari hal kesukaan kamu, mulai dari avatar dengan blob kuning
-          (salah satu warna kesukaanmu), dan latarnya (perpaduan cream dan
-          pink).
+          Web ini dibuat sekitar 2-1 bulan sebelum ultah kamu. Jadi apapun yang
+          terjadi sangat dekat sebelum ultah kamu kemungkinan tak akan
+          tersampaikan pada web ini. Ini dibuat sejauh itu karena aku sadar
+          belum tentu punya waktu luang kalo buatnya mepet tanggal 1 Sep.
+          Sebagian elemennya diambil dari hal kesukaan kamu, mulai dari avatar
+          dengan blob kuning (salah satu warna kesukaanmu), dan latarnya
+          (perpaduan cream dan pink).
           <br />
           <br />
           Maaf kalo isinya berantakan, tak terstruktur atau malah bikin mata
@@ -348,8 +364,18 @@
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <script>
       AOS.init();
-      // Launch confetti on page load
+
+      // Fungsi untuk menavigasi ke halaman letter.html
+      function goToLetter() {
+        window.location.href = "letter.html";
+      }
+
+      // Cek status ketika halaman dimuat
       window.onload = function () {
+        if (sessionStorage.getItem("hiddenSection") === "true") {
+          document.getElementById("hiddenSection").classList.remove("hidden");
+        }
+
         function randomConfetti() {
           const width = window.innerWidth;
           const height = window.innerHeight;
@@ -394,6 +420,7 @@
         }, 2500); // Start fading out after 3 seconds
       };
     </script>
+
     <!-- End of Script -->
 
     <!-- End of Script -->
